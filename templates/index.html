@@ -1,61 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>Calculator</title>
     <style>
-        body {
-            background: #0b0b0b;
-            color: white;
-            font-family: Arial;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .box {
-            background: #141414;
-            padding: 30px;
-            border-radius: 12px;
-            width: 300px;
-        }
-        h2 {
-            text-align: center;
-            color: #00eaff;
-        }
-        input, select, button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 8px;
-            border: none;
-        }
-        button {
-            background: #00eaff;
-            font-weight: bold;
-        }
+      body {
+        background: #0b0b0b;
+        color: white;
+        font-family: Arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .box {
+        background: #141414;
+        padding: 30px;
+        border-radius: 12px;
+        width: 300px;
+      }
+      h2 {
+        text-align: center;
+        color: #00eaff;
+      }
+      input,
+      select,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+        border: none;
+      }
+      button {
+        background: #00eaff;
+        font-weight: bold;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-<div class="box">
-    <h2>Calculator</h2>
-    <form method="post">
-        <input type="number" name="num1" placeholder="Enter number 1" required>
-        <input type="number" name="num2" placeholder="Enter number 2" required>
+  <body>
+    <div class="box">
+      <h2>Calculator</h2>
+      <form method="post">
+        <input
+          type="number"
+          name="num1"
+          placeholder="Enter number 1"
+          required
+        />
+        <input
+          type="number"
+          name="num2"
+          placeholder="Enter number 2"
+          required
+        />
 
         <select name="operation">
-            <option value="add">Addition</option>
-            <option value="sub">Subtraction</option>
-            <option value="mul">Multiplication</option>
-            <option value="div">Division</option>
+          <option value="add">Addition</option>
+          <option value="sub">Subtraction</option>
+          <option value="mul">Multiplication</option>
+          <option value="div">Division</option>
         </select>
 
         <button type="submit">Calculate</button>
-    </form>
+      </form>
 
-    {% if result is not none %}
-        <h3>Result: {{ result }}</h3>
-    {% endif %}
-</div>
-</body>
+      {% if result is not none %}
+      <h3>Result: {{ result }}</h3>
+      {% endif %}
+    </div>
+  </body>
 </html>
